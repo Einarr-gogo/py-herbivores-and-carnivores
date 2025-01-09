@@ -28,7 +28,7 @@ class Herbivore(Animal):
 
 
 class Carnivore(Animal):
-    def bite(self, priest: Animal) -> None:
-        if isinstance(priest, Herbivore):
-            if not priest.hidden:
-                priest.take_damage(50)
+    def bite(self, victim: Animal) -> None:
+        if isinstance(victim, Herbivore):
+            if not victim.hidden:
+                victim.take_damage(50)
